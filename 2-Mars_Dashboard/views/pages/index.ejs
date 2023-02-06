@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body style="background-color: #EAE7DC;">
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main class="container my-5">
+    <div class="row">
+      <% roverData.map(rover=> { %>
+        <div class="col-12 col-md-4 mt-4 mt-md-auto">
+          <div class="card text-bg-light border-secondary">
+            <img src="<%= `images/mars-${rover.get('name')}-rover.jpeg`.toLowerCase() %>"
+              class="img-fluid img-thumbnail" alt="<%= `${rover.get('name')}` %>">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= `${rover.get('name')}` %>
+              </h5>
+              <ul class="list-group list-group-flush mb-2">
+                <li class="list-group-item list-group-item-action text-secondary">
+                  <%= `Landing date: ${rover.get('landing_date')}` %>
+                </li>
+                <li class="list-group-item list-group-item-action text-secondary">
+                  <%= `Launch date: ${rover.get('launch_date')}` %>
+                </li>
+                <li class="list-group-item list-group-item-action text-secondary">
+                  <%= `Status: ${rover.get('status')}` %>
+                </li>
+                <li class="list-group-item list-group-item-action text-secondary">
+                  <%= `Date the most recent photos were taken: ${rover.get('max_date')}` %>
+                </li>
+                <li class="list-group-item list-group-item-action text-secondary">
+                  <%= `The number of total photos: ${rover.get('total_photos')}` %>
+                </li>
+              </ul>
+              <a href="<%= `./${rover.get('name')}`.toLowerCase() %>"
+                id="<%= `${rover.get('name')}`.toLowerCase()+'ImageButton' %>" class="btn btn-outline-dark">See more
+                photos</a>
+            </div>
+          </div>
+        </div>
+        <% })%>
+    </div>
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+</body>
+
+</html>

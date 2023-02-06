@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Start Your Pod Racer Simulation</title>
+    <link rel="stylesheet" href="assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="assets/stylesheets/Foundation-Sites-CSS/css/foundation.css">
+    <link rel="stylesheet" href="assets/stylesheets/index.css">
+    <script src="/assets/javascript/index.js" charset="utf-8"></script>
+</head>
+
+<body id="race">
+    <header class="grid-x grid-padding-x">
+        <h1 class="cell text-center">Start Your Pod Racer Sim</h1>
+    </header>
+    <main class="grid-x grid-padding-x">
+        <section id="create-race" class="cell">
+            <h2>Get Started</h2>
+            <form id="create-race" class="grid-container fluid">
+                <h3>Choose your track (required)</h3>
+                <ul class="grid-x grid-margin-x" id="tracks">
+                    <!-- filled via js -->
+                </ul>
+
+                <!-- this content is visible only to screen readers -->
+                <label for="course" class="sr-only">Race Course:</label>
+                <select id="course" name="course" class="required sr-only">
+                    <option value="trackname" id="trackname">test</option>
+                </select>
+
+                <h3>Choose your racer (required)</h3>
+                <ul class="grid-x grid-margin-x" id="racers">
+                    <!-- filled via js -->
+                </ul>
+
+                <!-- this content is visible only to screen readers -->
+                <label for="podRacer" class="sr-only">Pod Racer:</label>
+                <select id="podRacer" name="podRacer" class="required sr-only">
+                    <option value="test5">test</option>
+                </select>
+
+                <button class="button" type="submit" id="submit-create-race">Start Race</button>
+            </form>
+        </section>
+    </main>
+    <footer class="grid-x grid-padding-x grid-padding-y">
+        <div class="cell text-center">&copy; 2022 Copyright Yu Li</div>
+    </footer>
+</body>
+</html>

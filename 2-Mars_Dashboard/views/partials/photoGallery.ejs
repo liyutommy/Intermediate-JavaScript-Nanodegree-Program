@@ -1,0 +1,9 @@
+<% photos.map(photo => { %>
+    <div class="row mt-3">
+        <% photo.map(p => { %>
+            <div class="col">
+                <img src="<%= `${p}` %>" class="img-thumbnail max-width-height" alt="<%= `${roverInfo.get('name')} photo`.toLowerCase() %>">
+            </div>
+        <% }) %>
+    </div>
+<% }) %>
